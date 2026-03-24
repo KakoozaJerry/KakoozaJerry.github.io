@@ -530,7 +530,8 @@ a:hover, a:active, a:focus {
 -----------------------------------------*/
 
 #contact .experience-img {
-  background: url('../images/experience-img.jpg') no-repeat;
+  background: url('../images/global_network.jpg') center center no-repeat;
+  background-size: cover;
 }
 
 #contact .media-heading {
