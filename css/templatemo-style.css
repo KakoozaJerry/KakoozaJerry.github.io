@@ -6,12 +6,25 @@ http://www.templatemo.com/tm-498-stimulus
 
 */
 
+:root {
+    --primary-color: #E3AE57;
+    --secondary-color: #E9724C;
+    --dark-bg: #161616;
+    --dark-grey: #232B2B;
+    --text-color: #888;
+}
+
 body {
 	background: #ffffff;
     font-family: 'Source Sans Pro', sans-serif;
     font-style: normal;
 	font-weight: 300;
     overflow-x: hidden;
+}
+
+.resume-link strong {
+    font-weight: normal;
+    color: white;
 }
 
 html,body {
@@ -92,7 +105,7 @@ p {
 }
 
 .section-btn:hover {
-  background: #E3AE57;
+  background: var(--primary-color);
   border-color: transparent;
   color: #ffffff;
 }
@@ -113,8 +126,8 @@ p {
 }
 
 #about,
-#service,
-#experience,
+#employment,
+#contact,
 #education,
 #contact {
   position: relative;
@@ -122,8 +135,8 @@ p {
 
 #home .container,
 #about .container, 
-#experience .container,
-#service .container,
+#contact .container,
+#employment .container,
 #education .container,
 #contact .container {
   width: 100%;
@@ -131,20 +144,20 @@ p {
   margin: 0;
 }
 
-#experience .experience-thumb,
+#contact .experience-thumb,
 #education .education-thumb  {
   padding: 22px 42px 42px 42px;
 }
 
-#service,
+#employment,
 #quotes,
 footer {
   text-align: center;
 }
 
-#experience,
+#contact,
 #education {
-  background: #E9724C;
+  background: var(--secondary-color);
 }
 
 .background-image {
@@ -165,11 +178,11 @@ footer {
 }
 
 .color-yellow {
-  color: #E3AE57;
+  color: var(--primary-color);
 }
 
 .bg-yellow {
-  background: #E3AE57;
+  background: var(--primary-color);
 }
 
 .bg-white {
@@ -177,7 +190,7 @@ footer {
 }
 
 .bg-dark {
-  background: #161616;
+  background: var(--dark-bg);
 }
 
 
@@ -191,14 +204,14 @@ html{
 }
 
 a {
-  color: #E3AE57;
+  color: var(--primary-color);
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
   text-decoration: none !important;
 }
 a:hover, a:active, a:focus {
-  color: #E3AE57;
+  color: var(--primary-color);
   outline: none;
 }
 
@@ -252,12 +265,12 @@ a:hover, a:active, a:focus {
   margin-top: -10px;
   margin-left: -10px;
   border-radius: 50%;
-  border: 2px solid #E3AE57;
+  border: 2px solid var(--primary-color);
   border-top-color: #f9f9f9;
   animation: spinner .6s linear infinite;
 }
 
-@-webkit-@keyframes spinner {
+@-webkit-keyframes spinner {
   to {transform: rotate(360deg);}
 }
 
@@ -297,7 +310,7 @@ a:hover, a:active, a:focus {
 
 .custom-navbar .nav li a:hover {
     background: transparent;
-    color: #E3AE57;
+    color: var(--primary-color);
 }
 
 .custom-navbar .navbar-nav > li > a:hover,
@@ -307,7 +320,7 @@ a:hover, a:active, a:focus {
 
 .custom-navbar .nav li.active > a {
     background-color: transparent;
-    color: #E3AE57;
+    color: var(--primary-color);
 }
 
 .custom-navbar .navbar-toggle {
@@ -320,7 +333,7 @@ a:hover, a:active, a:focus {
 }
 
 .custom-navbar .navbar-toggle .icon-bar {
-    background: #E3AE57;
+    background: var(--primary-color);
     border-color: transparent;
 }
 
@@ -415,20 +428,26 @@ a:hover, a:active, a:focus {
     Service section              
 -----------------------------------------*/
 
-#service {
-  background: #E9724C;
+#employment {
+  background: var(--secondary-color);
 }
 
-#service p {
+#employment p {
   font-size: 18px;
   line-height: 30px;
 }
 
-#service .service-thumb {
+#employment .service-thumb {
   padding: 52px 22px 52px 22px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-#service .service-thumb .fa {
+#employment .service-thumb:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+#employment .service-thumb .fa {
   font-size: 42px;
   padding-bottom: 22px;
 }
@@ -439,20 +458,20 @@ a:hover, a:active, a:focus {
     Experience section              
 -----------------------------------------*/
 
-#experience .experience-img {
+#contact .experience-img {
   background: url('../images/experience-img.jpg') no-repeat;
 }
 
-#experience .media-heading {
+#contact .media-heading {
   margin-bottom: 0px;
 }
 
-#experience .media .fa {
+#contact .media .fa {
   font-size: 42px;
   margin-right: 14px;
 }
 
-#experience small {
+#contact small {
   color: #633;
   font-weight: bold;
 }
@@ -462,7 +481,7 @@ a:hover, a:active, a:focus {
 -----------------------------------------*/
 
 #education {
-  background: #E3AE57;
+  background: var(--primary-color);
 }
 
 #education .education-img {
@@ -523,7 +542,7 @@ a:hover, a:active, a:focus {
 -----------------------------------------*/
 
 #contact {
-  background: #E9724C;
+  background: var(--secondary-color);
 }
 
 #contact .contact-form,
@@ -549,7 +568,7 @@ a:hover, a:active, a:focus {
 #contact .form-control {
   background: transparent;
   border: none;
-  border-bottom: 1px solid #E3AE57;
+  border-bottom: 1px solid var(--primary-color);
   border-radius: 0px;
   box-shadow: none;
   color: #ffffff;
@@ -571,7 +590,7 @@ a:hover, a:active, a:focus {
   background: #ffffff;
   border: 2px solid transparent;
   border-radius: 40px;
-  color: #161616;
+  color: var(--dark-bg);
   padding-bottom: 10px;
 }
 
@@ -631,7 +650,7 @@ footer {
 }
 
 .social-icon li a:hover {
-    background: #E3AE57;
+    background: var(--primary-color);
     border-color: #ffffff;
     color: #ffffff;
     transform: scale(1.1);
@@ -672,8 +691,8 @@ footer {
 
   #home .container,
   #about .container, 
-  #experience .container,
-  #service .container,
+  #contact .container,
+  #employment .container,
   #education .container,
   #contact .container {
     padding-right: 15px;
@@ -681,7 +700,7 @@ footer {
   }
 
   #about .col-md-3,
-  #experience .col-md-6,
+  #contact .col-md-6,
   #education .col-md-6,
   #contact .col-md-3 {
     padding: 0;
