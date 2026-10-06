@@ -50,7 +50,88 @@ http://www.templatemo.com/tm-498-stimulus
                font-weight: 500;
                opacity: 0.85;
           }
-     </style>
+     
+          /* ---- P0: stat cards ---- */
+          .stat-row {
+               display: flex;
+               gap: 16px;
+               margin-top: 26px;
+               flex-wrap: wrap;
+          }
+          .stat-card {
+               flex: 1 1 150px;
+               padding: 18px 14px;
+               background: var(--glass-bg);
+               backdrop-filter: blur(12px);
+               -webkit-backdrop-filter: blur(12px);
+               border: 1px solid var(--glass-border);
+               border-radius: 16px;
+               text-align: center;
+          }
+          .stat-card .stat-num {
+               font-size: 28px;
+               font-weight: 700;
+               color: var(--primary-color);
+               line-height: 1.15;
+          }
+          .stat-card .stat-label {
+               font-size: 13px;
+               margin-top: 6px;
+               opacity: 0.85;
+          }
+          /* ---- P0: experience timeline ---- */
+          .timeline {
+               position: relative;
+               max-width: 860px;
+               margin: 10px auto 0;
+               padding: 20px 0 10px 36px;
+          }
+          .timeline::before {
+               content: "";
+               position: absolute;
+               left: 9px;
+               top: 0;
+               bottom: 0;
+               width: 3px;
+               background: var(--primary-color);
+               border-radius: 3px;
+               opacity: 0.8;
+          }
+          .timeline-item {
+               position: relative;
+               margin-bottom: 24px;
+          }
+          .timeline-item::before {
+               content: "";
+               position: absolute;
+               left: -33px;
+               top: 38px;
+               width: 14px;
+               height: 14px;
+               border-radius: 50%;
+               background: var(--primary-color);
+               box-shadow: 0 0 0 5px rgba(14,165,233,0.18);
+          }
+          .timeline-item .service-thumb {
+               text-align: left;
+               padding: 28px 26px;
+          }
+          .timeline-item .service-thumb h3 {
+               margin: 0 0 4px;
+          }
+          .timeline-item .service-thumb p {
+               margin: 6px 0 0;
+          }
+          .timeline-outcome {
+               opacity: 0.85;
+               font-size: 16px !important;
+               line-height: 26px !important;
+          }
+          @media (max-width: 768px) {
+               .stat-row { flex-direction: column; }
+               .timeline { padding-left: 30px; }
+          }
+</style>
 
 </head>
 
@@ -115,6 +196,20 @@ http://www.templatemo.com/tm-498-stimulus
                                    <div class="wow fadeInUp" data-wow-delay="0.8s" style="margin-top: 14px;">
                                         <span class="cert-badge"><i class="fa fa-shield"></i> ISC2 · Building AI
                                              Strategy Certificate <span class="cert-badge-date">Oct 2026</span></span>
+                                   </div>
+                                   <div class="stat-row">
+                                        <div class="stat-card">
+                                             <div class="stat-num">2 days → 5 min</div>
+                                             <div class="stat-label">Server provisioning with IaC</div>
+                                        </div>
+                                        <div class="stat-card">
+                                             <div class="stat-num">4+ yrs</div>
+                                             <div class="stat-label">Across cloud, cybersecurity &amp; telecom</div>
+                                        </div>
+                                        <div class="stat-card">
+                                             <div class="stat-num">MSc</div>
+                                             <div class="stat-label">Cybersecurity, Grand Canyon University</div>
+                                        </div>
                                    </div>
                                    <p class="wow fadeInUp" data-wow-delay="0.9s" style="margin-top: 20px;">A
                                         Seattle-based Software and Cloud Engineer with over 4 years of professional
@@ -218,79 +313,58 @@ http://www.templatemo.com/tm-498-stimulus
 
 
      <section id="employment" class="parallax-section">
-          <div class="container-fluid">
-               <div class="carousel-wrapper">
-                    <div class="carousel-track">
-                         <!-- Original Items -->
-                         <div class="carousel-item">
-                              <div class="color-white service-thumb">
-                                   <h3><strong>Cloud Engineer</strong></h3>
-                                   <h3><strong>(July 2025 - Present)</strong></h3>
-                                   <p><strong>Pioneer Human Services</strong></p>
-                              </div>
+          <div class="container">
+               <div class="row">
+                    <div class="col-md-12">
+                         <div class="section-title" style="text-align:center; margin-bottom: 10px;">
+                              <h1>Experience</h1>
+                              <p style="color: rgba(0,0,0,0.6);">Five roles, one trajectory — AI, cloud &amp; security.</p>
                          </div>
-                         <div class="carousel-item">
-                              <div class="color-white service-thumb">
-                                   <h3><strong>IT Infrastructure Systems Engineer </strong></h3>
-                                   <h3><strong>(Jan 2021 - Jan 2024) </strong></h3>
-                                   <p><strong>Stanbic Bank Uganda</strong></p>
+                         <div class="timeline">
+                              <div class="timeline-item">
+                                   <div class="color-white service-thumb">
+                                        <h3><strong>Cloud Engineer</strong></h3>
+                                        <h3><strong>(July 2025 - Present)</strong></h3>
+                                        <p><strong>Pioneer Human Services</strong></p>
+                                        <p class="timeline-outcome">Security governance, CMMC compliance &amp; sovereign cloud environments.</p>
+                                   </div>
                               </div>
-                         </div>
-                         <div class="carousel-item">
-                              <div class="color-white service-thumb">
-                                   <h3><strong>ML Engineer</strong></h3>
-                                   <h3><strong>(June 2021 - June 2022)</strong></h3>
-                                   <p><strong>Makerere AI Lab</strong></p>
+                              <div class="timeline-item">
+                                   <div class="color-white service-thumb">
+                                        <h3><strong>Hybrid Cloud Systems Engineer</strong></h3>
+                                        <h3><strong>(Jan 2024 - July 2025)</strong></h3>
+                                        <p><strong>Spokane Tribe of Indians</strong></p>
+                                        <p class="timeline-outcome">Hybrid cloud systems engineering.</p>
+                                   </div>
                               </div>
-                         </div>
-                         <div class="carousel-item">
-                              <div class="color-white service-thumb">
-                                   <h3><strong>Hybrid Cloud Systems Engineer</strong></h3>
-                                   <h3><strong>(Jan 2024 - July 2025)</strong></h3>
-                                   <p><strong>Spokane Tribe of Indians</strong></p>
+                              <div class="timeline-item">
+                                   <div class="color-white service-thumb">
+                                        <h3><strong>Technical Program Manager</strong></h3>
+                                        <h3><strong>(August 2023 - Present)</strong></h3>
+                                        <p><strong>Curious Learning</strong></p>
+                                        <p class="timeline-outcome">Technical program management.</p>
+                                   </div>
                               </div>
-                         </div>
-                         <div class="carousel-item">
-                              <div class="color-white service-thumb">
-                                   <h3><strong>Technical Program Manager </strong></h3>
-                                   <h3><strong>(August 2023 - Present)</strong></h3>
-                                   <p><strong>Curious Learning</strong></p>
+                              <div class="timeline-item">
+                                   <div class="color-white service-thumb">
+                                        <h3><strong>IT Infrastructure Software Engineer</strong></h3>
+                                        <h3><strong>(Jan 2021 - Jan 2024)</strong></h3>
+                                        <p><strong>Stanbic Bank Uganda</strong></p>
+                                        <p class="timeline-outcome">Cut server provisioning from 2 days to 5 minutes with Terraform, CloudFormation &amp; Ansible.</p>
+                                   </div>
                               </div>
-                         </div>
-
-                         <!-- Duplicated Items for Infinite Scroll -->
-                         <div class="carousel-item">
-                              <div class="color-white service-thumb">
-                                   <h3><strong>Cloud Engineer</strong></h3>
-                                   <h3><strong>(July 2025 - Present)</strong></h3>
-                                   <p><strong>Pioneer Human Services</strong></p>
-                              </div>
-                         </div>
-                         <div class="carousel-item">
-                              <div class="color-white service-thumb">
-                                   <h3><strong>IT Infrastructure Systems Engineer </strong></h3>
-                                   <h3><strong>(Jan 2021 - Jan 2024) </strong></h3>
-                                   <p><strong>Stanbic Bank Uganda</strong></p>
-                              </div>
-                         </div>
-                         <div class="carousel-item">
-                              <div class="color-white service-thumb">
-                                   <h3><strong>ML Engineer</strong></h3>
-                                   <h3><strong>(June 2021 - June 2022)</strong></h3>
-                                   <p><strong>Makerere AI Lab</strong></p>
-                              </div>
-                         </div>
-                         <div class="carousel-item">
-                              <div class="color-white service-thumb">
-                                   <h3><strong>Hybrid Cloud Systems Engineer</strong></h3>
-                                   <h3><strong>(Jan 2024 - July 2025)</strong></h3>
-                                   <p><strong>Spokane Tribe of Indians</strong></p>
+                              <div class="timeline-item">
+                                   <div class="color-white service-thumb">
+                                        <h3><strong>ML Engineer</strong></h3>
+                                        <h3><strong>(June 2021 - June 2022)</strong></h3>
+                                        <p><strong>Makerere AI Lab</strong></p>
+                                        <p class="timeline-outcome">Machine learning engineering — LSTM forecasting &amp; NLP models.</p>
+                                   </div>
                               </div>
                          </div>
                     </div>
                </div>
-          </div>
-     </section>
+          </div></section>
 
 
      <!-- Experience Section -->
